@@ -3,7 +3,7 @@ import Dots from "./Dots";
 import Navigation from "./Navigation";
 import Counter from "./Counter";
 import "./App.css";
-
+import Slideshow from './Slideshow';
 const DIVIDER_HEIGHT = 5;
 
 function App() {
@@ -13,14 +13,26 @@ function App() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [newImagesVisible, setNewImagesVisible] = useState(false);
 
-  const handleImageClick = (index) => {
-    setSelectedImage(index);
-  };
-
+  const images = [
+    'feature1.png',
+    'feature2.png',
+    'feature3.png',
+    'feature4.png',
+  ];
   const handleImageClose = () => {
     setSelectedImage(null);
   };
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
 
+  const handlePopupOpen = () => {
+    setIsPopupOpen(true);
+  };
+  const handlePopupToggle = () => {
+    setIsPopupOpen(!isPopupOpen);
+  };
+  const handlePopupClose = () => {
+    setIsPopupOpen(false);
+  };
   useEffect(() => {
     const wheelHandler = (e) => {
       e.preventDefault();
@@ -117,10 +129,26 @@ function App() {
             <p>Technology</p>
           </div>
           <div className="middle-text">
-            <p>단국대학교 죽전캠퍼스 IT+CT(정보기술+문화기술) 중심 특성화의 콘트롤 타워</p>
-            <p> 역할 수행을 목적으로 기존의 정보통신융합기술원과 미디어콘텐츠연구원의 </p>
-            <p> 두 연구원을 통합한 형태로 2015년 3월에 설립된 교책중점연구기관</p>
-          </div>
+          {isPopupOpen ? null : (
+            <button className="popup-button" onClick={handlePopupToggle}>
+              소개
+            </button>
+          )}
+          {isPopupOpen && (
+            <div className="popup">
+              <div className="popup-content">
+                <div className="popup-text">
+                  <p>단국대학교 죽전캠퍼스 IT+CT(정보기술+문화기술) 중심 특성화의 콘트롤 타워</p>
+                  <p>역할 수행을 목적으로 기존의 정보통신융합기술원과 미디어콘텐츠연구원의</p>
+                  <p>두 연구원을 통합한 형태로 2015년 3월에 설립된 교책중점연구기관</p>
+                </div>
+                <button className="close-button" onClick={handlePopupToggle}>
+                  x
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
         </div>
         <div className="divider"></div>
         <div className="inner bg-blue">
@@ -156,30 +184,7 @@ function App() {
             </div>
           </div>
           <div className="images-container">
-            <div className="image-box" onClick={() => handleImageClick(1)}>
-              <img src="/feature1.png" alt="Right Image 1" />
-              <div className="image-details">
-                <p className="image-description">주요실적</p>
-              </div>
-            </div>
-            <div className="image-box" onClick={() => handleImageClick(2)}>
-              <img src="/feature2.png" alt="Right Image 2" />
-              <div className="image-details">
-                <p className="image-description">주요실적</p>
-              </div>
-            </div>
-            <div className="image-box" onClick={() => handleImageClick(3)}>
-              <img src="/feature3.png" alt="Right Image 3" />
-              <div className="image-details">
-                <p className="image-description">주요실적</p>
-              </div>
-            </div>
-            <div className="image-box" onClick={() => handleImageClick(4)}>
-              <img src="/feature4.png" alt="Right Image 4" />
-              <div className="image-details">
-                <p className="image-description">주요실적</p>
-              </div>
-            </div>
+            <Slideshow images={images} />
           </div>
         </div>
         <div className="divider"></div>
