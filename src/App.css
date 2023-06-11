@@ -1,38 +1,293 @@
-.App {
-  text-align: center;
+/* App.css */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+/* 네비게이션 스타일 */
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 10px 0;
+  height: 80px; /* 내비게이션의 높이를 100px로 설정 */
+  padding: 10px 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navigation .logo img {
+  height: 80px; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.nav-links {
+  display: flex;
+}
+
+.navigation a {
+  color: black;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+  color: #61dafb;
+}
+.feature-box {
+  font-size: 12px; /* 원하는 글씨 크기로 설정해주세요 */
+}
+body {
+  margin: 0;
+  overflow-y: hidden;
+}
+
+.outer {
+  height: 100vh;
+  overflow-y: auto;
+}
+
+/* 화면에서 스크롤바 안보이게 */
+.outer::-webkit-scrollbar {
+  display: none;
+}
+
+.inner {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+}
+
+.inner.bg-yellow {
+  position: relative;
+}
+
+.inner.bg-yellow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  animation: imageSlideshow 15s infinite; /* 3초마다 이미지 전환을 위한 애니메이션 적용 */
+}
+
+@keyframes imageSlideshow {
+  0%, 100% {
+    background-image: url('./11_fix.png'); /* 첫 번째 이미지 경로 */
+  }
+  50% {
+    background-image: url('./example2.jpg'); /* 두 번째 이미지 경로 */
   }
 }
+.info-text {
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #fff;
+}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.middle-text {
+  position: absolute;
+  bottom: 6rem;
+  left: 2rem;
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.bg-blue {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-container {
+  margin-bottom: 10%; /* P와 사진들 사이의 간격 조정 */
+  font-size: 35px; /* 원하는 크기로 조정 */
+}
+
+.text-container p {
+  margin: 0;
+}
+
+.new-images-container {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+}
+.new-image-box.visible {
+  opacity: 1;
+}
+
+.new-image-box {
+  width: auto;
+  height: auto;
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+
+.new-image-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-height: 25vh; /* 이미지의 최대 높이를 조정해주세요 */
+}
+
+.images-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.image-box {
+  width: 90%;
+  height: 25%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.image-details {
+  position: absolute;
+  top: 0;
+  width: 90%;
+  padding: 3px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.image-description {
+  color: white;
+  font-size: 10px;
+}
+
+.image-box img {
+  width: 90%;
+  height: 100%;
+  object-fit: cover;
+  max-height: 23vh; /* 이미지의 최대 높이를 조정해주세요 */
+}
+.modal {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-image {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.modal .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+.bg-pink {
+  background-image: url("example7.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3개의 열 */
+  grid-template-rows: repeat(2, 1fr); /* 2개의 행 */
+  gap: 40px; /* 이미지 간격 설정 */
+  justify-content: center; /* 수평 가운데 정렬 */
+  align-items: center; /* 수직 가운데 정렬 */
+  align-content: flex-start; /* 사진을 상단으로 정렬 */
+  margin-top: -5%;
+  margin-left: 10%; /* 왼쪽에 10px 여백 추가 */
+}
+
+.grid-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.grid-item .image-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-item .text-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 45%;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: height 0.3s;
+}
+
+.grid-item .text-overlay-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100%;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.grid-item:hover .text-overlay {
+  height: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.grid-item:hover .text-overlay-content {
+  opacity: 1;
+}
+.grid-item .text-overlay h3 {
+  font-size: 18px;
+  color: #fff;
+}
+.grid-item .text-overlay p {
+  font-size: 14px;
+  color: #fff;
+}
+
+.grid-item img {
+  max-width: 45%;
+  max-height: 60%;
+}
+
+.divider 
+{
+  width: 100%;
+  height: 5px;
+  background-color: gray;
 }
