@@ -1,0 +1,47 @@
+.page5 {
+  background-image: url("page4-2_back.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 450px; /* 가로 100%, 세로 500px */
+}
+@media (min-device-width: 1920px) and (min-device-height: 1440px) {
+  .page5 {
+    background-size: 100% 600px; /* 가로 100%, 세로 500px */
+  }
+}
+@media (max-width: 767px) {
+  .page5 {
+ background-size: 100% 350px;
+  }
+}
+section.notice {
+  padding: 200px 0;
+}
+
+.page-title {
+  text-align: center;
+}
+
+.page-title .acontainer4 h3 {
+  font-size: 50px;
+  color: white;
+}
+
+.App {
+  margin-top: 10%; /* App 컴포넌트의 상단 여백을 조정합니다 */
+}
+.App table{
+  width: 100% !important; 
+  font-size: 25px;
+}
+.App button{
+  padding: 20px 20px;
+  font-size: 15px;
+  background-color: black !important;
+  color: white !important;
+  position: relative;
+}
+
+.App button:hover{
+  background-color: rgb(50, 195, 224) !important;
+  color: black !important;
+}

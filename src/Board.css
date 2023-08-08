@@ -1,0 +1,36 @@
+/* Board.css 파일 */
+.board-parent {
+  display: flex;
+  justify-content: center;
+}
+
+.board-container {
+  width: 100%;
+  max-width: 2000px;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.board-title0 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.divider {
+  height: 1px;
+  background-color: #ccc;
+  margin: 15px 0;
+}
+
+.board-content {
+  white-space: pre-line;
+  line-height: 1.6;
+}
+
+.board-image {
+  width: 70%;
+  max-height: 600px; /* 원하는 높이로 설정 */
+}

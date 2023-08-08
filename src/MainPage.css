@@ -1,0 +1,458 @@
+/* App.css */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+/* 네비게이션 스타일 */
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(44, 42, 42, 0.314);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  z-index: 1;
+  padding: 10px;
+}
+
+.navigation .logo img {
+  height: 60px;
+}
+@media (max-device-width: 767px) {
+  .navigation .logo img{
+    width: 60%; /* 작은 화면에 맞게 폰트 크기 조정 */
+  }
+}
+.nav-links {
+  display: flex;
+}
+.navigation:hover {
+  background-color: white;
+}
+.navigation:hover a{
+  color: black;
+}
+.navigation a {
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+  margin: 0 20px;
+  transition: color 0.3s ease;
+}
+@media (max-device-width: 767px) {
+  .navigation a{
+    font-size: 12px; /* 작은 화면에 맞게 폰트 크기 조정 */
+    margin: 0 3px;
+  }
+}
+@media (min-device-width: 768px) and (max-device-width: 1200px) {
+  .navigation a {
+    font-size: 10px;
+  }
+}
+.navigation a:hover {
+  color: rgb(50, 195, 224);
+}
+
+.outer {
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.outer::-webkit-scrollbar {
+  display: none;
+}
+
+.inner {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  position: relative;
+}
+
+.inner.bg-yellow {
+  overflow: hidden;
+  background-image: url("1번.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.inner.bg-yellow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.inner.bg-yellow video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1; /* 동영상 투명도 조절 */
+}
+.info-text {
+  position: absolute;
+  top: 12%;
+  left: 2rem;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.3;
+  color: white;
+  letter-spacing: 10px;
+}
+@media (min-device-width: 1920px) and (min-device-height: 1440px) {
+  .info-text{
+    font-size: 60px; /* 원하는 위치로 버튼 위치를 수정합니다. */
+  }
+}
+@media (min-device-width: 768px) and (max-device-width: 1200px) {
+  .info-text {
+    font-size: 20px;
+    top:20%;
+  }
+}
+.info-text p:first-child {
+  font-size: 50px; /* 또는 원하는 크기로 변경 */
+}
+.middle-text {
+  position: absolute;
+  bottom: 6rem;
+  right:0;
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.bg-blue {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background: linear-gradient(white 45%, #ddf6ff 55%);
+}
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.text-container {
+  margin-top: 10%;
+  margin-bottom: 15%; /* P와 사진들 사이의 간격 조정 */
+  font-size: 80px; /* 원하는 크기로 조정 */
+}
+
+.text-container p{
+  position: relative;
+  font-weight: 900;
+  margin: 0;
+  align-items: center;
+  top:10%;
+  margin-bottom: 30px;
+}
+@media (max-device-width: 767px) {
+  .text-container p{
+    font-size: 25px; /* 작은 화면에 맞게 폰트 크기 조정 */
+  }
+}
+@media (min-device-width: 768px) and (max-device-width: 1200px) {
+  .text-container p {
+    font-size: 30px;
+  }
+}
+.text-container v3 {
+  margin-top: 10px;
+  position: absolute;
+  font-size: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  justify-content: center;
+  margin-bottom: 5%;
+}
+@media (max-device-width: 767px) {
+  .text-container v3 {
+    font-size: 15px; /* 작은 화면에 맞게 폰트 크기 조정 */
+  }
+}
+@media (min-device-width: 768px) and (max-device-width: 1200px) {
+  .text-container v3 {
+    font-size: 20px;
+  }
+}
+.purposevision {
+font-size: 60px;
+
+}
+.second-table{
+  display: table;
+  width: 175%;
+}
+@media (max-device-width: 767px) {
+  .second-table{
+    width: 100%;
+  }
+}
+.new-images-container {
+  display: table-row;
+}
+@media (max-device-width: 767px) {
+  .new-images-container{
+    display: flex;
+    flex-direction: column; /* 이미지들을 세로로 배치 */
+  }
+  }
+  @media (min-device-width: 768px) and (max-device-width: 1200px) {
+    .new-images-container {
+      display: table-row;
+    }
+  }
+.new-images-container p{
+  left: 45%;
+  position: relative;
+  font-size: 25px;
+}
+.new-image-box.visible {
+  opacity: 1;
+}
+
+.purpose-image{
+  display: table-cell;
+  bottom: 30%;
+  margin-top: 10px;
+}
+.purpose-image p{
+  margin-top: 0%;
+  left: 27%;
+  position: relative;
+  font-size: 35px;
+}
+@media (max-device-width: 767px) {
+.purpose-image p{
+   font-size: 10px;
+   left: 35%;
+}
+}
+@media (min-device-width: 768px) and (max-device-width: 1200px) {
+  .purpose-image p {
+    font-size: 10px;
+  }
+}
+.purpose-image img{
+  max-width: 45%;
+  max-height: 45%;
+  margin-left: 27%;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+/* 모바일 기기용 미디어 쿼리 추가 */
+@media (max-width: 767px) {
+  .purpose-image img {
+    /* 이미지 크기를 조정하여 화면에 맞게 출력 */
+    max-width: 50%; /* 원하는 크기로 조정 */
+    max-height: auto; /* 이미지 비율을 유지하기 위해 height 값을 auto로 설정 */
+    margin-left: 25%; /* 가로 간격을 조정 */
+  }
+  .purpose-image {
+    display: block; /* 셀을 블록 요소로 변경하여 세로로 배치 */
+    margin-top: 20px; /* 필요한 경우 셀 사이의 간격을 조정 */
+  }
+}
+
+@media (min-device-width: 768px) and (max-device-width: 1200px) {
+  .purpose-image img {
+    max-width: 50%; /* 원하는 크기로 조정 */
+    max-height: auto; /* 이미지 비율을 유지하기 위해 height 값을 auto로 설정 */
+    margin-left: 25%;
+  }
+  .purpose-image{
+    display: table-cell;
+  }
+}
+.purpose-image:hover img {
+  transform: rotateY(180deg);
+}
+
+.new-image-box p{
+  left:40%
+}
+.image-container img {
+  width: 180%;
+  height: 90%;
+  object-fit: cover;
+  max-height: 37vh; /* 이미지의 최대 높이를 조정해주세요 */
+
+}
+
+.images-container {
+  margin-top: 3%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: 5%;
+}
+
+.image-box {
+  width: 90%;
+  height: 25%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.image-details {
+  position: absolute;
+  top: 0;
+  width: 90%;
+  padding: 3px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.image-description {
+  color: white;
+  font-size: 10px;
+}
+
+.image-box img {
+  width: 90%;
+  height: 100%;
+  object-fit: cover;
+  max-height: 23vh; /* 이미지의 최대 높이를 조정해주세요 */
+}
+.modal {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-image {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.modal .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+.bg-pink {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(white 45%, #ddf6ff 55%);
+}
+@media (max-width: 767px) {
+  .bg-pink {
+    display: none; /* 모바일에서 .inner.bg-pink를 숨김 */
+  }
+}
+
+@media (min-device-width: 768px) and (max-device-width: 1200px) {
+  .bg-pink {
+    display: none; /* 모바일에서 .inner.bg-pink를 숨김 */
+  }
+}
+.divider 
+{
+  width: 100%;
+  height: 5px;
+  background-color: gray;
+}
+
+@font-face {
+  font-family: 'SUITE-Medium.ttf';
+  src: url(./fonts/SUITE-Medium.ttf) format('truetype');
+  /* 다른 폰트 포맷을 사용하거나 추가하려면 여기에 추가합니다 */
+}
+
+body {
+  font-family: 'SUITE-Medium.ttf', sans-serif;
+}
+.image-gallery-container {
+  margin-left: 5%;
+  margin-top: 0%;
+  display: flex;
+  align-items: center; /* 수직 정렬을 위해 요소들을 세로 중앙으로 정렬합니다. */
+  justify-content: center; /* 수평 정렬을 위해 요소들을 가로 중앙으로 정렬합니다. */
+}
+  
+.left-image {
+  margin-top: 5%;
+}
+@media (min-width: 1920px) and (min-height: 1080px) {
+  .left-image img {
+    width: 120%;
+    height: 150%; /* 이미지 크기를 2배로 설정 */
+    margin-left:-10%;
+    margin-top: 5%;
+  }
+}
+@media (max-width: 767px) {
+  .left-image img {
+    display: block; /* .right-images 클래스에 속한 이미지들만 보이도록 설정 */
+    width: 130%; /* 이미지 크기 조절 */
+    margin-left: -20%;
+  }
+}
+.right-images {
+  display: flex;
+  justify-content: center; /* 수평으로 중앙에 배치됩니다. */
+  align-items: center; /* 수직으로 중앙에 배치됩니다. */
+  flex-wrap: wrap; /* 요소들이 여러 행에 나열되도록 설정합니다. */
+  margin-top: 3%;
+}
+.right-images img
+{
+  width: 90%;
+margin-left: -10%;
+}@media (min-width: 1920px) and (min-height: 1080px) {
+  .right-images img {
+    width: 200%;
+    height: 200%; /* 이미지 크기를 2배로 설정 */
+    margin-left: 15%;
+  }
+}
+/* 모바일 기기용 미디어 쿼리 */
+@media (max-width: 767px) {
+  .right-images img {
+    display: block; /* .right-images 클래스에 속한 이미지들만 보이도록 설정 */
+    width: 100%; /* 이미지 크기 조절 */
+    margin-left: 10%;
+  }
+}
+
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnimation 2s ease-in forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

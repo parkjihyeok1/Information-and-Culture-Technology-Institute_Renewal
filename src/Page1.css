@@ -1,0 +1,169 @@
+.page1_index
+{
+    background-image: url("page1-2_back.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 90%; /* 이미지를 요소에 맞게 자동으로 크기 조정 */
+    height: 65vh; /* 원하는 높이로 설정 */
+}
+.page1_index h9 {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px; /* 원하는 크기로 설정합니다. */
+  color: white;
+  font-size: 50px;
+  letter-spacing: 10px;
+}
+@media (min-device-width: 1920px) and (min-device-height: 1440px) {
+  .page1_index h9  {
+    font-size: 80px;
+  }
+}
+@media (max-width: 767px) {
+  .page1_index h9 {
+    font-size: 25px;
+    color: black;
+  }
+}
+.page1_index h1{
+    text-align: center;
+    font-size: 60px;
+}
+.page1_index p{
+    text-align: center;
+    font-size: 40px;
+}
+
+.organization-image{
+    width: 100%;
+}
+.button-group {
+  display: flex; /* 버튼 내부 요소들을 수평으로 정렬하기 위해 flexbox를 사용합니다. */
+  align-items: center; /* 버튼 내부 요소들을 수직 방향으로 가운데로 정렬합니다. */
+  justify-content: center; /* 버튼 내부 요소들을 수평 방향으로 가운데로 정렬합니다. */
+  text-align: center;
+  position: absolute;
+  top: 44%;
+  left: 50%; /* 좌측에서 50% 위치에 배치합니다. */
+  transform: translateX(-50%); /* 좌표 기준을 가운데로 이동시킵니다. */
+  z-index: 1;
+}
+
+.button-group button{
+    margin-top: 7%;
+    font-size: 22px;
+    border: 0;
+    width: 45%;
+    padding: 20px 40px;
+    background-color: transparent; /* 배경을 투명하게 설정 */
+    transition: background-color 0.3s ease;
+    color: white;
+    display: flex; /* 텍스트를 가로로 배치하기 위해 flex로 설정 */
+    justify-content: center; /* 가로 방향 가운데로 정렬 */
+}
+@media (min-device-width: 1920px) and (min-device-height: 1440px) {
+  .button-group {
+    top: 51%; /* 원하는 위치로 버튼 위치를 수정합니다. */
+  }
+}
+@media (max-width: 767px) {
+  .button-group button {
+    display: flex; /* 텍스트를 가로로 배치하기 위해 flex로 설정 */
+    font-size: 20px; /* 작은 화면에 적합한 글꼴 크기로 조정합니다. */
+    padding: 10px 0px; /* 적절한 여백 값으로 조정합니다. */
+    width: 100%;
+  }
+  .button-group{
+    top:51%;
+  }
+}
+@media (min-device-width: 768px) and (max-device-width: 1200px) {
+  .button-group button {
+    margin-top: 7%;
+    font-size: 22px;
+    border: 0;
+    width: 45%;
+    padding: 20px 40px;
+    font-size: 10px;
+    
+  }
+}
+.button-group button:hover {
+    background-color: white; /* 마우스 오버 시 배경색을 하얀색으로 변경 */
+    color:black;
+  }
+  .button-group button.active {
+    background-color: white;
+    color: black;
+  }
+  .section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 3s, transform 3s;
+  }
+  
+  .section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .scroll-navigation {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .scroll-to-top {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .scroll-to-top:hover {
+    background-color: #555;
+  }
+  .show {
+    position: absolute;
+    top: calc(70%); /* 버튼 아래에 위치하도록 설정합니다. */
+    left: 50%; /* 좌측에서 50% 위치에 배치합니다. */
+    transform: translateX(-50%); /* 좌표 기준을 가운데로 이동시킵니다. */
+    width: 100%;
+  }
+
+  .purpose h1 {
+    /* 기본적인 글씨 크기 설정 */
+    font-size: 60px;
+  }
+  
+  /* 767px 미만인 경우 */
+  @media (max-width: 767px) {
+    .purpose h1 {
+      /* 원하는 글씨 크기로 조정 */
+      font-size: 30px;
+    }
+    .purpose p{
+      font-size: 20px;
+    }
+  }
+
+  .history h1{
+    font-size: 60px;
+  }
+  @media (max-width: 767px) {
+    .history h1 {
+   font-size: 30px;
+    }
+  }
+
+  .greeting{
+    font-size: 60px;
+  }
+  @media (max-width: 767px) {
+    .greeting h1 {
+   font-size: 30px;
+    }
+  }

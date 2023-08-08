@@ -1,0 +1,28 @@
+
+.page3-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Add some margin to create space between the buttons and the table */
+  }
+  
+  /* Reduce font size for table header and table cells */
+  table tbody th,
+  table tbody td {
+    font-size: 14px; /* Adjust the font size as needed */
+  }
+  
+  /* Reduce font size for the button elements */
+  .custom-button {
+    font-size: 12px; /* Adjust the font size as needed */
+    margin-right: 50px; /* Add some right margin to create space between the buttons */
+    left: 23px;
+  }
+  @media (max-width: 767px) {
+    .custom-button {
+   font-size: 10px;
+    }
+  }
+  /* Reduce font size for the link inside buttons */
+  .custom-button a {
+    font-size: 12px; /* Adjust the font size as needed */
+  }
