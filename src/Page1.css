@@ -1,6 +1,6 @@
 .page1_index
 {
-    background-image: url("page1-2_back.jpg");
+    background-image: url("9_fix.png");
     background-repeat: no-repeat;
     background-size: 100% 90%; /* 이미지를 요소에 맞게 자동으로 크기 조정 */
     height: 65vh; /* 원하는 높이로 설정 */
@@ -44,7 +44,7 @@
   justify-content: center; /* 버튼 내부 요소들을 수평 방향으로 가운데로 정렬합니다. */
   text-align: center;
   position: absolute;
-  top: 44%;
+  top: 45.5%;
   left: 50%; /* 좌측에서 50% 위치에 배치합니다. */
   transform: translateX(-50%); /* 좌표 기준을 가운데로 이동시킵니다. */
   z-index: 1;

@@ -42,7 +42,7 @@
   left: 50%;
   transform: translateX(-50%);
   width: 100%; /* 그리드 컨테이너의 너비를 조정 */
-  top: 85.5%;
+  top: 87%;
 }
 @media (min-device-width: 1920px) and (min-device-height: 1440px) {
   .button-group2{

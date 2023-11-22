@@ -207,8 +207,51 @@ function MainPage() {
             </div>
             <div className="right-images">
                 <img src="3-8.png" alt="3-1" ref={image2Ref} className={image2InView ? "fade-in" : ""} />
-                
-              </div>
+                <div style={{ position: "absolute", top: "25%", left: "48%", transform: "translate(-50%, -50%)" }}>
+    <p style={{ fontSize: "20px", color: "black", background: "rgba(0, 0, 0, 0)" ,whiteSpace: "pre-line"}}>
+    총 19건, 376억 규모의 국책과제 수행으로 대학산학협력 및 연구역량 강화에 기여
+    </p>
+    <p style={{ fontSize: "17px", color: "black", background: "rgba(0, 0, 0, 0)" ,whiteSpace: "pre-line"}}>
+    "산업통산자원부(한국에너지기술평가원)", "SW중심대학 지원사업(정보통신기획평가원)", llTP", "ITRC사업" 수행
+    </p>
+    </div>
+    <div style={{ position: "absolute", top: "52.5%", left: "45.5%", transform: "translate(-50%, -50%)" }}>
+    <p style={{ fontSize: "20px", color: "black", background: "rgba(0, 0, 0, 0)" ,whiteSpace: "pre-line"}}>
+    ICT특성화 연구 수행
+    </p>
+    <p style={{ fontSize: "17px", color: "black", background: "rgba(0, 0, 0, 0)" ,whiteSpace: "pre-line"}}>
+    자율운전 기반 지능형 건물 에너지 환경 통합 관리 시스템(iBEEMS)개발 수행(총 285억){'\n'}
+이벤트 기반 실험시스템 구축을 통한 자동차 내외부 아티팩트 수집 및 통합 분석 기술 개발(총 35억){'\n'}
+비정형 빅데이터를 위한 새로운 키-밸류 DB 개발 수행(총2억2천){'\n'}
+멀티 모달 딥러닝 모델 기반 한국수어 통역 시스템 개발 수행(총3억)
+    </p>
+    <p style={{ fontSize: "20px", color: "black", background: "rgba(0, 0, 0, 0)" ,whiteSpace: "pre-line"}}>
+    국외논문 총18편, 국내논문 총 31편 발표로 국내외에 연구성과 발표로 위상 강화
+    </p>
+    <p style={{ fontSize: "17px", color: "black", background: "rgba(0, 0, 0, 0)" ,whiteSpace: "pre-line"}}>
+    연구원 참여교수진이 IEEE 등 해외 학술지에 주저자, 공저자로 활발한 연구성과 논문발표
+    </p>
+    <p style={{ fontSize: "20px", color: "black", background: "rgba(0, 0, 0, 0)" ,whiteSpace: "pre-line"}}>
+    ICT연구교육에 특화된 대학특성화에 기여  SW중심대학 선정{'\n'}ITRC 선정으로 죽전캠퍼스의 ICT 특성화에 기여
+    </p>
+    </div>
+    <div style={{ position: "absolute", top: "80%", left: "47%", transform: "translate(-50%, -50%)" }}>
+    <p style={{ fontSize: "20px", color: "black", background: "rgba(0, 0, 0, 0)" ,whiteSpace: "pre-line"}}>
+    ICT교육에 특화된 죽전캠퍼스
+    </p>
+    <p style={{ fontSize: "17px", color: "black", background: "rgba(0, 0, 0, 0)" ,whiteSpace: "pre-line"}}>
+    소프트웨어학과, 응용컴퓨터공학과, 모바일시스템공학과, 전자전기공학과 등 ICT관련 학과의 교육특성화 기여
+    </p>
+    </div>
+    </div>
+    <div style={{ position: "absolute", top: "94%", left: "45.5%", transform: "translate(-50%, -50%)" }}>
+    <p style={{ fontSize: "20px", color: "black", background: "rgba(0, 0, 0, 0)" ,whiteSpace: "pre-line"}}>
+    학제적 융합연구 촉진으로 학내 및 산학 융합연구 기반 마련
+    </p>
+    <p style={{ fontSize: "17px", color: "black", background: "rgba(0, 0, 0, 0)" ,whiteSpace: "pre-line"}}>
+    연구포럼을 통한 연구네트워킹, 학내외 융합연구를 위한 인적 리소스 및 기술 확보로 융합연구 기반 마련
+    </p>
+    </div>
     </div>
         </div>
       </div>

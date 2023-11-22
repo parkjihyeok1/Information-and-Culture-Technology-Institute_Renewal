@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import BoardList3 from './BoardList3'; // Updated import for BoardList3
-import Write2 from "./Write3"; // Updated import for Write3
 import './Page5.css';
 
 class App extends Component {

@@ -1,0 +1,18 @@
+@media (min-width: 768px) {
+  /* 화면 크기가 768px 이상일 때의 스타일 설정 */
+  div.relative {
+    position: relative;
+  }
+  div.absolute-1 {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+  }
+  div.absolute-2 {
+    position: absolute;
+    top: 25%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+  }
+}
