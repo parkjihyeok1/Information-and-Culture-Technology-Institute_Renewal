@@ -61,7 +61,7 @@ class BoardList5 extends Component<IProps, IState> {
   };
 
   getList = () => {
-    Axios.get("http://220.149.236.48:3306/list5", {})
+    Axios.get("https://220.149.236.48:3306/list5", {})
       .then((res) => {
         const { data } = res;
         this.setState({
@@ -95,7 +95,7 @@ class BoardList5 extends Component<IProps, IState> {
       boardIdList += `'${v}',`;
     });
 
-    Axios.post("http://220.149.236.48:3306/delete5", {
+    Axios.post("https://220.149.236.48:3306/delete5", {
       boardIdList: boardIdList.substring(0, boardIdList.length - 1),
     })
       .then(() => {
@@ -170,7 +170,7 @@ class BoardList5 extends Component<IProps, IState> {
                   <td>{index + 1}</td>
                   <td>
                     <a
-                      href={`220.149.236.48:3306/page5/${v.BOARD_ID5}`}
+                      href={`220.149.236.48:3306/page3/${v.BOARD_ID5}`}
                       onClick={() => {
                         this.setState({
                           selectedBoardId: v.BOARD_ID5,

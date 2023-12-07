@@ -61,7 +61,7 @@ class BoardList3 extends Component<IProps, IState> {
   };
 
   getList = () => {
-    Axios.get("http://220.149.236.48:3306/list3", {})
+    Axios.get("https://220.149.236.48:3306/list3", {})
       .then((res) => {
         const { data } = res;
         this.setState({
@@ -95,7 +95,7 @@ class BoardList3 extends Component<IProps, IState> {
       boardIdList += `'${v}',`;
     });
 
-    Axios.post("http://220.149.236.48:3306/delete3", {
+    Axios.post("https://220.149.236.48:3306/delete3", {
       boardIdList: boardIdList.substring(0, boardIdList.length - 1),
     })
       .then(() => {
