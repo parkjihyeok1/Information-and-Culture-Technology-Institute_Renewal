@@ -14,10 +14,10 @@ app.use(cors({
 }));
 
 const db = mysql.createPool({
-  host: "localhost",
-  user: "root",
+  host: "220.149.236.48",
+  user: "res1",
   password: "1234",
-  database: "dataroom",
+  database: "homepage",
 });
 
 const storage = multer.diskStorage({
@@ -510,8 +510,8 @@ app.post("/delete", (req, res) => {
           // 이미지 파일과 PDF 파일의 경로를 포함하여 클라이언트에 전송
           const dataToSend = {
             ...result[0],
-            IMAGE_FILE: result[0].IMAGE_FILE ? `http://localhost:8000/${result[0].IMAGE_FILE}` : null,
-            PDF_FILE: result[0].PDF_FILE ? `http://localhost:8000/${result[0].PDF_FILE}` : null,
+            IMAGE_FILE: result[0].IMAGE_FILE ? `http://220.149.236.48:3306/${result[0].IMAGE_FILE}` : null,
+            PDF_FILE: result[0].PDF_FILE ? `http://220.149.236.48:3306/${result[0].PDF_FILE}` : null,
           };
           res.send(dataToSend);
         }
@@ -534,8 +534,8 @@ app.post("/delete", (req, res) => {
         // 이미지 파일과 PDF 파일의 경로를 포함하여 클라이언트에 전송
         const dataToSend = {
           ...result[0],
-          IMAGE_FILE: result[0].IMAGE_FILE ? `http://localhost:8000/${result[0].IMAGE_FILE}` : null,
-          PDF_FILE: result[0].PDF_FILE ? `http://localhost:8000/${result[0].PDF_FILE}` : null,
+          IMAGE_FILE: result[0].IMAGE_FILE ? `http://220.149.236.48:3306/${result[0].IMAGE_FILE}` : null,
+          PDF_FILE: result[0].PDF_FILE ? `http://220.149.236.48:3306/${result[0].PDF_FILE}` : null,
         };
         res.send(dataToSend);
       }
@@ -558,8 +558,8 @@ app.post("/detail3", (req, res) => {
         // 이미지 파일과 PDF 파일의 경로를 포함하여 클라이언트에 전송
         const dataToSend = {
           ...result[0],
-          IMAGE_FILE: result[0].IMAGE_FILE ? `http://localhost:8000/${result[0].IMAGE_FILE}` : null,
-          PDF_FILE: result[0].PDF_FILE ? `http://localhost:8000/${result[0].PDF_FILE}` : null,
+          IMAGE_FILE: result[0].IMAGE_FILE ? `http://220.149.236.48:3306/${result[0].IMAGE_FILE}` : null,
+          PDF_FILE: result[0].PDF_FILE ? `http://220.149.236.48:3306/${result[0].PDF_FILE}` : null,
         };
         res.send(dataToSend);
       }
@@ -581,8 +581,8 @@ app.post("/detail4", (req, res) => {
         // 이미지 파일과 PDF 파일의 경로를 포함하여 클라이언트에 전송
         const dataToSend = {
           ...result[0],
-          IMAGE_FILE: result[0].IMAGE_FILE ? `http://localhost:8000/${result[0].IMAGE_FILE}` : null,
-          PDF_FILE: result[0].PDF_FILE ? `http://localhost:8000/${result[0].PDF_FILE}` : null,
+          IMAGE_FILE: result[0].IMAGE_FILE ? `http://220.149.236.48:3306/${result[0].IMAGE_FILE}` : null,
+          PDF_FILE: result[0].PDF_FILE ? `http://220.149.236.48:3306/${result[0].PDF_FILE}` : null,
         };
         res.send(dataToSend);
       }
@@ -604,8 +604,8 @@ app.post("/detail5", (req, res) => {
         // 이미지 파일과 PDF 파일의 경로를 포함하여 클라이언트에 전송
         const dataToSend = {
           ...result[0],
-          IMAGE_FILE: result[0].IMAGE_FILE ? `http://localhost:8000/${result[0].IMAGE_FILE}` : null,
-          PDF_FILE: result[0].PDF_FILE ? `http://localhost:8000/${result[0].PDF_FILE}` : null,
+          IMAGE_FILE: result[0].IMAGE_FILE ? `http://220.149.236.48:3306/${result[0].IMAGE_FILE}` : null,
+          PDF_FILE: result[0].PDF_FILE ? `http://220.149.236.48:3306/${result[0].PDF_FILE}` : null,
         };
         res.send(dataToSend);
       }

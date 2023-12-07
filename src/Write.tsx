@@ -48,7 +48,7 @@ class Write extends Component<IProps, IState> {
       formData.append("pdfFile", selectedPdfFile);
     }
   
-    Axios.post("http://localhost:8000/insert", formData)
+    Axios.post("http://220.149.236.48:3306/insert", formData)
       .then((res) => {
         console.log("파일 업로드 및 작성완료:", res.data);
         this.setState({
@@ -86,7 +86,7 @@ class Write extends Component<IProps, IState> {
       formData.append("pdfFile", selectedPdfFile);
     }
   
-    Axios.post("http://localhost:8000/update", formData)
+    Axios.post("http://220.149.236.48:3306/update", formData)
       .then((res) => {
         console.log("파일 업로드 및 수정완료:", res.data);
         this.props.handleCancel();
@@ -98,7 +98,7 @@ class Write extends Component<IProps, IState> {
   };
 
   detail = () => {
-    Axios.post("http://localhost:8000/detail", {
+    Axios.post("http://220.149.236.48:3306/detail", {
       id: this.props.boardId,
     })
       .then((res) => {

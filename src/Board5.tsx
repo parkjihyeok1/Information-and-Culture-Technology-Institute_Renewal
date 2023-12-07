@@ -22,7 +22,7 @@ const Board5: React.FC<IProps> = ({ boardId }) => {
   });
 
   useEffect(() => {
-    Axios.post("http://localhost:8000/detail5", {
+    Axios.post("http://220.149.236.48:3306/detail5", {
       id: boardId,
     })
       .then((res) => {
